@@ -89,7 +89,7 @@ form .gender-details .category{
     margin: 14px 0 ;
     justify-content: space-between;
   }
-  /* .gender-details .category label{
+  .gender-details .category label{
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -154,4 +154,4 @@ form .button input:hover{
       flex-direction: column;
     }
   } 
-   */
+  
