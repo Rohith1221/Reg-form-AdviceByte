@@ -93,17 +93,18 @@ form .gender-details .category{
     display: flex;
     align-items: center;
     cursor: pointer;
-  } */
+  } 
 
 
-  select#gender {
+  select#gndr {
     border: 1px solid #ccc;
     font-size: 15px;
-    outline: 0px;
+    outline: none;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
 }
-select#gender:focus{
+select#gndr:focus{
+    outline: none;
     border-color: #9b59b6;
 }
 
