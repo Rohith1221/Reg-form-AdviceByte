@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <script>
+        function disableSubmit() {
+            document.getElementById("submit").disabled = true;
+        }
+
+        function activateButton(element) {
+
+            if (element.checked) {
+                document.getElementById("submit").disabled = false;
+            }
+            else {
+                document.getElementById("submit").disabled = true;
+            }
+
+        }
+    </script>
+
+
+
+</head>
+
+<body onload="disableSubmit()">
+
+    <div class="container">
+        <div class="title">Registration</div>
+        <form action="#" autocomplete="off">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">User Name</span>
+                    <input type="text" placeholder="Enter your username" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Field of expertise</span>
+                    <input type="text" placeholder="Enter your field" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Years of experience</span>
+                    <input type="text" placeholder="Enter the years" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone</span>
+                    <input type="text" placeholder="Enter your number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">confirm Password</span>
+                    <input type="password" placeholder="Confirm your password" required>
+                </div>
+
+            </div>
+            <div class="gender-details">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <!-- <label for="">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="">
+                        <span class="dot one"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="">
+                        <span class="dot one"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label> -->
+                    <label for="gender">Choose :</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+            </div>
+
+            <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)"> <a href="#"
+                style="color: black; text-decoration: none;">I Agree Terms &
+                Conditions</a>
+
+
+            <div class="button">
+                <input type="submit" value="Register" name="submit" id="submit">
+            </div>
+
+        </form>
+
+
+        <div id="vanta-canvas"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+        <script type="text/javascript">
+            VANTA.HALO({
+                el: "#vanta-canvas",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                size: 1.7
+            })
+        </script>
+    </div>
+</body>
+
+</html>
